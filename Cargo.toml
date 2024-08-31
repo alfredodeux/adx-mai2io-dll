@@ -1,0 +1,3 @@
+[workspace]
+resolver = "2"
+members = ["adx-button-server-hid", "adx-button-server-io4", "adx-mai2io"]

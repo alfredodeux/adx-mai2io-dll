@@ -1,0 +1,16 @@
+[package]
+edition = "2021"
+name = "adx-mai2io"
+version = "0.1.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+raw_sync = "0.1.5"
+shared_memory = "0.12.4"
+windows = "0.34.0"
+
+[lib]
+crate-type = ["cdylib"]
+name = "adx_mai2io"
+path = "src/mai2io.rs"
