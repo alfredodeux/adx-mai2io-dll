@@ -1,9 +1,9 @@
 # Yuancon ADX Controller mai2io.dll
-This is a test to see whether we can improve button delay by bypassing segatools io4/hid implementation. 
+This is a test to see whether we can improve button delay by bypassing segatools io4/hid implementation. This uses the segatools mai2io API which can be found in `segatools/mai2io/mai2io.h`
 
-The bin directory provides prebuilt executables and dll. 
+The `bin` directory provides prebuilt executables and dll. 
 
-The pytests directory provides simple examples of reading from the buttons and touch sensor with python.
+The `pytests` directory provides simple examples of reading from the buttons and touch sensor with python.
 
 Notes:
 - Controller uses 2 usb ports. The front is a composite USB device featuring 3 device classes. The rear is power and can be plugged into wall. 
@@ -16,6 +16,11 @@ Conclusions:
 - computer runs much cooler and I experience less stutter
 - io4 firmware is slightly faster and more consistent than hid
 - 2p ADX can be easily setup using the principles in this repo
+
+Open Questions:
+- can we add a callback to the mai2io button function to poll faster?
+- can we add a delay to the touch sensor within segatools to synchronize touch/button timing?
+- are we dealing with a different issue? Some users report fast buttons depending on setup such as screen refresh rate. 
 
 This is created by Rust but there are many `unsafe` is used. Memory leaks may appear and the stability still need to be tested.
 
